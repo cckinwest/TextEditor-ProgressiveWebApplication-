@@ -54,8 +54,8 @@ The files in this app has a client/server structure, as shown below:\
 ## Service worker
 
 - Set the network to be 'offline'. When I refresh the page, the app still work by loading from the cache.
-  ![serviceWorker1](./screenshots/sericeWorker1.png)
-  ![serviceWorker2](./screenshots/sericeWorker2.png)
+  ![serviceWorker1](./screenshots/serviceWorker1.png)
+  ![serviceWorker2](./screenshots/serviceWorker2.png)
 
 ## Deployment
 
