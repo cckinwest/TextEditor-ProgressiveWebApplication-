@@ -13,9 +13,6 @@ module.exports = () => {
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
-      header: "./src/js/header.js",
-      editor: "./src/js/editor.js",
-      database: "./src/js/database.js",
     },
     output: {
       filename: "[name].bundle.js",
@@ -48,7 +45,7 @@ module.exports = () => {
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join("assets", "logos"),
+            destination: path.join("assets", "icons"),
           },
         ],
       }),
