@@ -29,7 +29,7 @@ export default class {
     getDb().then((data) => {
       console.info("Loaded data from IndexedDB, injecting into editor");
 
-      if (data.length) {
+      if (data && data.length) {
         this.editor.setValue(header.concat(data.pop().content));
       } else if (localData) {
         this.editor.setValue(header.concat(localData));
@@ -49,9 +49,13 @@ export default class {
     this.editor.on("blur", async () => {
       console.log("The editor has lost focus");
       const data = await getDb();
-      const latest = data.pop().content;
 
-      if (localStorage.getItem("content") !== latest) {
+      if (data && data.length) {
+        const latest = data.pop().content;
+        if (localStorage.getItem("content") !== latest) {
+          putDb(localStorage.getItem("content"));
+        }
+      } else {
         putDb(localStorage.getItem("content"));
       }
     });
