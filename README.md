@@ -40,7 +40,7 @@ The files in this app has a client/server structure, as shown below:\
   ![indexedDB1](./screenshots/indexedDB1.png)
 
 - When I enter something in the app, the content will be saved after losing focus.
-  ![indexedDB1](./screenshots/indexedDB1.png)
+  ![indexedDB2](./screenshots/indexedDB2.png)
 
 - When I reopen the text editor after closing it, then content in the text editor has been retrieved from our IndexedDB
 
